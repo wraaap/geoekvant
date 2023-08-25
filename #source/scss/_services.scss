@@ -1,0 +1,196 @@
+.services {
+    margin-bottom: 140px;
+    @media (max-width: 575.98px) {
+        margin-bottom: 60px;
+    }
+    // .services__item-btn
+
+    &__item-btn {
+        min-height: 119px;
+        padding: 12px 30px 12px 110px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        color: #fff;
+        background: $color-green;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        position: relative;
+        width: 100%;
+        &:hover,
+        &.active {
+            background: $color-red;
+		}
+        @media (max-width: 1600px) {
+            padding-left: 95px;
+        }
+        @media (max-width: 991.98px) {
+            padding: 12px 30px 12px 75px;
+            min-height: auto;
+            }
+        @media (max-width: 767.98px) {
+            min-height: auto;
+            padding: 16px 26px 13px 15px;
+            gap: 15px;
+        }
+        &::before {
+            content: url('../../img/services/check.svg');
+            position: absolute;
+            left: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 41px;
+            height: 38px;
+            @media (max-width: 1600px) {
+                left: 30px;
+                width: 23px; 
+                height: 21px;
+            }
+            // @media (max-width: 991.98px) {
+            //     width: 23px; 
+            //     height: 21px;
+            // }
+            @media (max-width: 767.98px) {
+                width: 23px; 
+                height: 21px;
+                display: none; /* Скрываем псевдоэлемент на мобильных устройствах? */
+            }
+        }
+    }
+
+		// .services__item-btn-text
+
+		&__item-btn-text {
+            color: #FFF;
+            font-family: "Jost";
+            font-size: 33px;
+            font-weight: 500;
+            line-height: 120%; /* 39.6px */
+            text-transform: uppercase;
+            @media (max-width: 1800px) {
+                font-size: 30px;
+            }
+            @media (max-width: 1600px) {
+                font-size: 28px;
+            }
+            @media (max-width: 1400px) {
+                font-size: 26px;
+            }
+            @media (max-width: 1200px) {
+                font-size: 23px;
+            }
+            @media (max-width: 991.98px) {
+                font-size: 20px;
+                line-height: 140%;
+            }
+            @media (max-width: 767.98px) {
+                font-size: 18px;
+            }
+		}
+
+    // .services__item-content
+
+    &__item-content {
+        > img {
+            height: auto;
+            width: 100%;
+            max-height: 359px;
+            overflow: hidden;
+            object-fit: cover;
+            @media (max-width: 767.98px) {
+                max-height: 100px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            height: 2px;
+            background: rgba(233, 78, 27, 0.30);
+            filter: blur(1.5px); 
+        }
+        @media (max-width: 767.98px) {
+            height: 318px;
+        }
+    }
+
+    // .services__item-content-title
+
+    &__item-content-title {
+        color: $color-dark;
+        font-family: "Jost";
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 120%; /* 42px */
+        margin: 30px;
+        max-height: 359px;
+        @media (max-width: 1800px) {
+            font-size: 30px;
+        }
+        @media (max-width: 1600px) {
+            font-size: 28px;
+        }
+        @media (max-width: 1400px) {
+            font-size: 26px;
+        }
+        @media (max-width: 1200px) {
+            font-size: 23px;
+        }
+        @media (max-width: 992px) {
+            font-size: 20px;
+        }
+        @media (max-width: 767.98px) {
+            margin: 10px;
+            font-size: 30px;
+        }
+    }
+
+    // .services__item-content-text
+
+    &__item-content-text {
+        color: $color-dark;
+        font-family: "Jost";
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 120%; /* 33.6px */
+        margin: 30px;
+        height: 166px;
+        /* Ограничение по высоте и количеству строк */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5; /* Максимальное количество строк */
+        overflow: hidden;
+
+        /* Добавляет многоточие в конце текста */
+        text-overflow: ellipsis;
+        @media (max-width: 1800px) {
+            font-size: 28px;
+        }
+        @media (max-width: 1600px) {
+            font-size: 24px;
+            height: 150px;
+        }
+        @media (max-width: 1400px) {
+            font-size: 22px;
+            height: 135px;
+        }
+        @media (max-width: 1200px) {
+            font-size: 20px;
+            height: 120px;
+        }
+        @media (max-width: 992px) {
+            font-size: 18px;
+            height: 105px;
+        }
+        @media (max-width: 767.98px) {
+            margin: 10px;
+            font-size: 17px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.none {
+}

@@ -1,0 +1,302 @@
+.header {
+    background: #fff;
+    position: relative;
+
+    &__container {
+        .menu-open & {
+            @media (min-width: 576px) {
+                max-width: 100vw;
+            }
+        }
+    }
+
+    // .row {
+    //     @media (max-width: 767.99px) {
+    //         width: 576px;
+    //         margin: 0 auto;
+    //     }
+    // }
+
+    // .header__row
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 158px;
+        gap: 30px;
+    }
+
+    // .header__logo
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: 190px;
+        height: 108px;
+        @media (max-width: 1600px) {
+            width: 150px;
+            max-height: 86px;
+        }
+        @media (max-width: 767.99px) {
+            width: 116px;
+            height: 67px;
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            @media (max-width: 991.99px) {
+                gap: 12px;
+            }
+            @media (max-width: 767.99px) {
+                flex-direction: column;
+            }
+        }
+
+        ul li a {
+            font-family: "Jost";
+            font-size: 25px; 
+            text-transform: uppercase; 
+            font-weight: 400;
+            white-space: nowrap;
+            @media (max-width: 1800px) {
+                font-size: 22px; 
+            }
+            @media (max-width: 1600px) {
+                font-size: 20px; 
+            }
+            @media (max-width: 1400px) {
+                font-size: 18px; 
+            }
+            @media (max-width: 1199.98px) {
+                font-size: 16px;
+            }
+            @media (max-width: 991.98px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    // .header__phone-wrapper
+
+    &__phone-wrapper {
+        @media (max-width: 767.98px) {
+            display: block;
+            width: fit-content;
+            .button {
+                padding: 10px 18px;
+                margin-bottom: 20px;
+            }
+            .button a {
+                display: block;
+            }
+        }
+    }
+
+    // .header__phone
+
+    &__phone {
+        .button {
+            padding: 11px 45px;
+            @media (max-width: 1800px) {
+                padding: 9px 35px;
+            }
+            @media (max-width: 1600px) {
+                padding: 8px 30px;
+            }
+            @media (max-width: 1400px) {
+                padding: 7px 25px;
+            }
+            @media (max-width: 992px) {
+                padding: 7px 7px;
+            }
+            @media (max-width: 767.98px) {
+                padding: 10px 18px;
+                display: none;
+                .menu-open & {
+                    display: flex;
+                }
+            }
+            
+            img {
+                @media (max-width: 1400px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .button a {
+            color: #FFF;
+            font-family: "Jost";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%; /* 25px */
+            white-space: nowrap;
+            @media (max-width: 1800px) {
+                font-size: 22px; 
+            }
+            @media (max-width: 1600px) {
+                font-size: 20px; 
+            }
+            @media (max-width: 1400px) {
+                font-size: 16px; 
+            }
+            @media (max-width: 1300px) {
+                display: none;
+            }
+            @media (max-width: 767.98px) {
+                display: block;
+            }
+        }
+    }
+
+    // .header__phone-body
+
+    &__phone-body {
+    }
+
+    // .header__phone-link
+
+    &__phone-link {
+    }
+
+    // .header__burger
+
+    &__burger {
+        display: none;
+        @media (max-width: 767.98px) {
+            flex: 0 1 30px;
+            justify-content: flex-end;
+            display: flex;
+        }
+    }
+}
+
+.menu {
+
+    // .menu__icon
+
+    &__icon {
+    }
+}
+.icon-menu {
+}
+
+.header__menu-wrapper {
+    @media (max-width: 767.98px) {
+        display: none;
+        .menu-open & {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #fff;
+            width: 100vw;
+            padding: 30px 0 30px 0;
+            z-index: 30;
+
+            .header__menu{
+                max-width: 540px;
+                margin: 0 auto;
+                ul li a {
+                    padding: 10px 20px 10px 0;
+                    font-size: 20px;
+                    &:hover {
+                        color: $color-red;
+                    }
+                }
+                ul li.active a {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+    @media (max-width: 767.98px) {
+        .menu-open & {
+            padding: 30px 13.5px;
+        }
+    }
+}
+
+
+
+// Burger ====================================================================================================
+.icon-menu {
+	display: none;
+	@media (max-width: 767.98px) {
+		display: block;
+		position: relative;
+		width: 45px;
+		height: 28px;
+		cursor: pointer;
+		z-index: 15;
+        background: none;
+        outline: none;
+        border: none;
+        z-index: 50;
+        .menu-open & {
+            margin-top: -40px;
+            margin-right: 40px;
+        }
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			background-color: $color-dark;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: 41%;
+		}
+		.menu-open & {
+			span {
+				width: 0;
+                height: 2px;
+			}
+			&::before {
+				top: 46%;
+				transform: rotate(-45deg);
+                height: 2px;
+			}
+			&::after {
+				bottom: 46%;
+				transform: rotate(45deg);
+                height: 2px;
+			}
+		}
+	}
+}
+
+.menu-open body{
+    overflow: hidden;
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 20;
+    }
+}

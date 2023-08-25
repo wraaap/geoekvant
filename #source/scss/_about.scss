@@ -1,0 +1,44 @@
+.about {
+
+    // .about__container
+
+    &__container {
+    }
+
+    // .about__content
+
+    &__content {
+        display: flex;
+        gap: 50px;
+    }
+
+    // .about__text
+
+    &__text {
+    }
+
+    // .about__img
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 991.98px) {
+            display: none;
+        }
+        img {
+            width: 70%;
+            height: auto;
+        }
+    }
+}
+.container {
+}
+.row {
+}
+.col {
+}
+.title {
+}
+.img-fluid {
+}

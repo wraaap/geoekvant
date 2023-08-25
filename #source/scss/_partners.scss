@@ -1,0 +1,105 @@
+.partners {
+    margin: 70px 0 95px 0;
+    @media (max-width: 575.98px) {
+        margin: 40px -13.5px 60px 0;
+
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    // .partners__wrapper
+
+    &__wrapper {
+        height: 100%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        position: relative; 
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        @media (max-width: 767.98px) {
+            overflow: visible;
+        }
+    }
+
+    // .partners__item
+
+    &__item {
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -3px;
+            // right: 2px;
+            top: 5%;
+            width: 2px;
+            // height: 188px;
+            height: 90%;
+            // margin: auto 0;
+            background: rgba(233, 78, 27, 0.30);
+            filter: blur(1.5px); 
+            z-index: 100;
+            // @media (max-width: 767.98px) {
+            //     height: 100%;
+            // }
+        }
+    }
+
+    // .partners__item-bg
+
+    &__item-bg {
+        background-color: #fff;
+        position: relative;
+        padding: 20px;
+        margin-left: 3px;
+        // height: 114px;
+        // @media (max-width: 767.98px) {
+        //     height: 95px;
+        // }
+        // @media (max-width: 575.98px) {
+        //     height: 105px;
+        // }
+        // @media (max-width: 450px) {
+        //     height: 114px;
+        // }
+        img {
+            width: 100%;
+            display: block;
+            @media (max-width: 767.98px) {
+                height: 95px;
+                // width: auto;
+                margin: 0 auto;
+                width: 100%;
+            }
+            @media (max-width: 575.98px) {
+                // height: 105px;
+                height: 100%;
+            }
+            @media (max-width: 450px) {
+                // height: 114px;
+                width: 100%;
+            }
+        }
+    }
+}
+.partners-button-next,
+.partners-button-prev {
+    top: 50%;
+    transform: translateY(-25%);
+    @media (max-width: 767.98px) {
+        display: none;
+    }
+}
+.swiper-partners {
+    overflow: hidden;
+    @media (max-width: 1600px) { // последняя правка
+        overflow: visible; // последняя правка
+    }
+    @media (max-width: 767.98px) {
+        overflow: visible;
+    }
+}
+.partners__wrapper {
+    overflow: visible;
+}

@@ -1,0 +1,161 @@
+.team-about {
+    margin-bottom: 140px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 90px;
+    }
+
+    // .team-about__wrapper
+
+    &__wrapper {
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    // .team-about__item
+
+    &__item {
+        padding: 32px 32px 66px 32px;
+        flex: 0 0 31%;
+        // margin: 10px;
+        border: 2px solid rgba(233, 78, 27, 0.30);
+        // filter: blur(1.5px); 
+        margin-bottom: 90px;
+        @media (max-width: 1600px) {
+            padding: 28px 28px 56px 28px;
+        }
+        @media (max-width: 1220px) {
+            padding: 23px 23px 47px 23px;
+        }
+        @media (max-width: 992px) {
+            padding: 19px 19px 37px 19px;
+            flex: 0 0 48%;
+            margin-bottom: 110px;
+        }
+        @media (max-width: 767.98px) {
+            padding: 14px 13px 28px 13px;
+            // max-width: 259px;
+            // height: 246px;
+            margin-top: 10px;
+        }
+        @media (max-width: 575.98px) {
+            flex: 1 0 100%;
+            // :nth-last-child() {
+            //     margin-bottom: 0px;
+            // }
+        }
+    }
+
+    // .team-about__item-bg
+
+    &__item-bg {
+        position: relative;
+        background-color: $color-green;
+        aspect-ratio: 1.14;
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 120%;
+            transform: translateX(-50%);
+            @media (max-width: 767.98px) {
+                max-height: 227px;
+            }
+            @media (max-width: 575.98px) {
+                max-height: none;
+                height: 110%;
+            }
+        }
+    }
+
+    // .team-about__item-text
+
+    &__item-text {
+        width: 66%;
+        height: 150px;  // последняя правка
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0; 
+        background-color: #fff;
+        align-self: center;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        padding: 0 5px;
+        @media (max-width: 1600px) {
+            margin-top: 8px;
+            // height: 102px;
+            height: min-content;
+        }
+        @media (max-width: 1220px) {
+            margin-top: 6px;
+        }
+        @media (max-width: 991.98px) {
+            margin-top: 4px;
+            padding: 0 25px;
+        }
+        @media (max-width: 767.98px) {
+            height: 85px;
+            // padding: 0 25px;
+            margin-top: 3px;
+        }
+        @media (max-width: 575.98px) {
+            justify-content: start;
+            margin-top: 10px;
+        }
+    }
+
+    // .team-about__item-text-name
+
+    &__item-text-name {
+        color: $color-dark;
+        font-family: "Jost";
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 120%; /* 39.6px */
+        text-transform: capitalize;
+        @media (max-width: 1600px) {
+            font-size: 28px;
+        }
+        @media (max-width: 1220px) {
+            font-size: 25px;
+        }
+        @media (max-width: 992px) {
+            font-size: 22px;
+        }
+        @media (max-width: 767.98px) {
+            font-size: 18px;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 33px;
+        }
+    }
+
+    // .team-about__item-text-practice
+
+    &__item-text-practice {
+        color: $color-dark;
+        font-family: "Jost";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 33.6px */
+        text-transform: lowercase;
+        @media (max-width: 1600px) {
+            font-size: 25px;
+        }
+        @media (max-width: 1220px) {
+            font-size: 22px;
+        }
+        @media (max-width: 992px) {
+            font-size: 19px;
+        }
+        @media (max-width: 767.98px) {
+            font-size: 16px;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 28px;
+        }
+    }
+}

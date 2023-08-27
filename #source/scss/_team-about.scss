@@ -19,7 +19,7 @@
         // margin: 10px;
         border: 2px solid rgba(233, 78, 27, 0.30);
         // filter: blur(1.5px); 
-        margin-bottom: 90px;
+        margin-bottom: 130px;
         @media (max-width: 1600px) {
             padding: 28px 28px 56px 28px;
         }
@@ -35,7 +35,7 @@
             padding: 14px 13px 28px 13px;
             // max-width: 259px;
             // height: 246px;
-            margin-top: 10px;
+            margin-top: 10px; 
         }
         @media (max-width: 575.98px) {
             flex: 1 0 100%;
@@ -71,7 +71,8 @@
 
     &__item-text {
         width: 66%;
-        height: 150px;  // последняя правка
+        // height: 150px;  // последняя правка
+        height: 95px; 
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -83,6 +84,9 @@
         margin-top: 10px;
         text-align: center;
         padding: 0 5px;
+        @media (max-width: 1950px) {
+            width: 75%;
+        }
         @media (max-width: 1600px) {
             margin-top: 8px;
             // height: 102px;
@@ -115,6 +119,9 @@
         font-weight: 500;
         line-height: 120%; /* 39.6px */
         text-transform: capitalize;
+        @media (max-width: 1950px) {
+            font-size: 30px;
+        }
         @media (max-width: 1600px) {
             font-size: 28px;
         }
@@ -142,6 +149,9 @@
         font-weight: 400;
         line-height: 120%; /* 33.6px */
         text-transform: lowercase;
+        @media (max-width: 1950px) {
+            font-size: 26px;
+        }
         @media (max-width: 1600px) {
             font-size: 25px;
         }

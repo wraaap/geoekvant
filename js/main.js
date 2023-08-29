@@ -77,70 +77,121 @@ var swiperPartners = new Swiper(".swiper-partners", {
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 
+// простое
+
+// document.addEventListener("click", function (e) {
+//     if (e.target.closest('.icon-menu')) {
+//         document.body.classList.toggle('_lock');
+//         document.documentElement.classList.toggle("menu-open");
+//     }
+// }); 
+
+// с закрытием по клику в области вне 
+
 document.addEventListener("click", function (e) {
+    var menu = document.querySelector('.header__menu-wrapper'); // Замените на селектор вашего меню
+    
     if (e.target.closest('.icon-menu')) {
         document.body.classList.toggle('_lock');
         document.documentElement.classList.toggle("menu-open");
+    } else if (!menu.contains(e.target)) {
+        // Если клик был вне меню, закрываем его
+        document.body.classList.remove('_lock');
+        document.documentElement.classList.remove("menu-open");
     }
-}); 
+});
 
 
 // Адаптивные размеры блока team item =======================================================================================================================================================================================================================
 
-// Получаем коллекцию всех элементов с классом .team__item
-var elements = document.querySelectorAll(".team__item");
+function updateElementSizes() {
 
-// Проходим через каждый элемент и устанавливаем высоту на основе его ширины
-elements.forEach(function(element) {
-    var currentWidth = element.offsetWidth; // в пикселях
-    var newHeight = currentWidth * 0.945 + "px"; // если высота 607 и ширина 574
-    element.style.height = newHeight; // Устанавливаем новую высоту
-});
+    // Получаем коллекцию всех элементов с классом .team__item
+    var elements = document.querySelectorAll(".team__item");
+
+    // Проходим через каждый элемент и устанавливаем высоту на основе его ширины
+    elements.forEach(function(element) {
+        var currentWidth = element.offsetWidth; // в пикселях
+        var newHeight = currentWidth * 0.945 + "px"; // если высота 607 и ширина 574
+        element.style.height = newHeight; // Устанавливаем новую высоту
+    });
+}
+
+// Обновляем размеры элементов при загрузке страницы
+updateElementSizes();
+
+// Добавляем обработчик события resize
+window.addEventListener("resize", updateElementSizes);
+
 
 // Переключение табов с услугами при наведении мыши =======================================================================================================================================================================================================================
 
-document.addEventListener("DOMContentLoaded", function() {
-    var tabs = document.querySelectorAll(".nav-link");
+function hoverTabSwitching() {
+    document.addEventListener("DOMContentLoaded", function() {
+        var tabs = document.querySelectorAll(".nav-link");
+        console.log(tabs);
 
-    tabs.forEach(function(tab) {
-        tab.addEventListener("mouseenter", function() {
-            var target = this.getAttribute("data-bs-target");
-            document.querySelector(target).classList.add("active", "show");
-            tabs.forEach(function(otherTab) {
-                if (otherTab !== tab) {
-                    var otherTarget = otherTab.getAttribute("data-bs-target");
-                    document.querySelector(otherTarget).classList.remove("active", "show");
-                }
+        tabs.forEach(function(tab) {
+            tab.addEventListener("mouseenter", function() {
+                var target = this.getAttribute("data-bs-target");
+                document.querySelector(target).classList.add("active", "show");
+                tab.classList.add("active", "show"); 
+                tabs.forEach(function(otherTab) {
+                    if (otherTab !== tab) {
+                        var otherTarget = otherTab.getAttribute("data-bs-target");
+                        document.querySelector(otherTarget).classList.remove("active", "show");
+                        otherTab.classList.remove("active", "show"); 
+                    }
+                });
+
+                
             });
         });
     });
-});
+}
+
+updateElementSizes();
+
+window.addEventListener("resize", updateElementSizes);
 
 // Добавляем для табов с услугами поведение "аккордеон" на устройствах с шириной до 576 =======================================================================================================================================================================================================================
 
-document.addEventListener("DOMContentLoaded", function() {
-    var tabs = document.querySelectorAll(".nav-link");
-    var contentContainer = document.querySelector("#myTabContent");
-
-    if (window.innerWidth < 576) {
-        tabs[0].insertAdjacentElement('afterend', contentContainer);
-
-        tabs.forEach(function(tab, index) {
-            tab.addEventListener("click", function() {
-                tab.insertAdjacentElement('afterend', contentContainer);
+function addAccordion() {
+    document.addEventListener("DOMContentLoaded", function() {
+        var tabs = document.querySelectorAll(".nav-link");
+        var contentContainer = document.querySelector("#myTabContent");
+    
+        if (window.innerWidth < 576) {
+            tabs[0].insertAdjacentElement('afterend', contentContainer);
+    
+            tabs.forEach(function(tab, index) {
+                tab.addEventListener("click", function() {
+                    tab.insertAdjacentElement('afterend', contentContainer);
+                });
             });
-        });
-    }
-});
+        }
+    });
+}
+
+addAccordion();
+
+window.addEventListener("resize", addAccordion);
+
 
 
 // Перемещаем телефон в хедере на устройствах с шириной до 576 =======================================================================================================================================================================================================================
 
-document.addEventListener("DOMContentLoaded", function() {
-    var menu = document.querySelector(".header__menu")
-    var phone = document.querySelector(".header__phone-wrapper")
+function movePhoneToHeader() {
+    document.addEventListener("DOMContentLoaded", function() {
+        var menu = document.querySelector(".header__menu")
+        var phone = document.querySelector(".header__phone-wrapper")
 
-    if (window.innerWidth < 768) {
-        menu.insertAdjacentElement('afterbegin', phone);
-    }
-});
+        if (window.innerWidth < 768) {
+            menu.insertAdjacentElement('afterbegin', phone);
+        }
+    });
+}
+
+movePhoneToHeader();
+
+window.addEventListener("resize", movePhoneToHeader);

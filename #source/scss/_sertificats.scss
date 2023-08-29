@@ -7,6 +7,9 @@
     .container {
         position: relative;
         height: 828px;
+        @media (max-width: 991.98px) { 
+            height: 670px;
+        }
         @media (max-width: 767.98px) {
             margin-right: 0;
             padding-right: 0;

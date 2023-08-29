@@ -3,6 +3,9 @@
     @media (max-width: 767.98px) {
         margin-bottom: 100px;
     }
+    @media (max-width: 575.98px) {
+        margin-bottom: 0;
+    }
 
     &__wrapper {
         gap: 20px;
@@ -19,6 +22,7 @@
         @media (max-width: 575.98px) {
             padding-bottom: 20px;
             height: 400px;
+            height: 350px;
             margin-right: -13.5px;
         }
     }
@@ -29,6 +33,9 @@
         min-height: 100%;
         overflow: visible; // последняя правка
         height: 600px; // последняя правка
+        @media (max-width: 991.98px) {
+            height: 350px;
+        }
         @media (max-width: 767.98px) {
             padding: 15px 0 20px 0;
             height: 300px; // последняя правка
@@ -43,6 +50,7 @@
     &__item {
         padding: 32px 32px 66px 32px;
         border: 2px solid rgba(233, 78, 27, 0.30);
+        border-bottom: none;
         // filter: blur(1.5px); 
         @media (max-width: 1600px) {
             padding: 28px 28px 56px 28px;
@@ -58,6 +66,25 @@
             // max-width: 259px;
             // height: 246px;
             margin-top: 10px;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            // top: 50%;
+            bottom: -1px;
+            width: 20%;
+            height: 2px;
+            background-color: rgba(233, 78, 27, 0.3);
+            transform: translateY(-50%);
+        }
+        
+        &::before {
+            left: 0; /* Расстояние от левого края */
+        }
+        
+        &::after {
+            right: 0; /* Расстояние от правого края */
         }
     }
 
@@ -96,7 +123,7 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0; 
-        background-color: #fff;
+        // background-color: #fff;
         align-self: center;
         margin: 0 auto;
         margin-top: 10px;
@@ -129,6 +156,7 @@
         font-weight: 500;
         line-height: 120%; /* 39.6px */
         text-transform: capitalize;
+        // position: relative;
         @media (max-width: 1600px) {
             font-size: 28px;
         }
@@ -144,6 +172,8 @@
         @media (max-width: 575.98px) {
             font-size: 16px;
         }
+
+        
     }
 
     // .team__item-text-practice
@@ -176,6 +206,9 @@
     .swiper-button-next {
         right: 52px;
         top: 720px;
+        @media (max-width: 991.98px) {
+            top: 480px;
+        }
         @media (max-width: 767.98px) {
             top: 376px;
             right: 0;
@@ -185,6 +218,9 @@
     .swiper-button-prev {
         left: 0;
         top: 720px;
+        @media (max-width: 991.98px) {
+            top: 480px;
+        }
         @media (max-width: 767.98px) {
             top: 376px;
         }

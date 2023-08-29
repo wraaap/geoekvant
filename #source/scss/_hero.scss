@@ -40,8 +40,8 @@
         max-width: 1300px;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: 30px;
-        margin-right: 30px;
+        // margin-left: 30px;
+        // margin-right: 30px;
         color: #FFF;
         font-family: 'Jost', sans-serif;
         line-height: 120%;
@@ -93,6 +93,9 @@
         line-height: 120%;
         &:not(:last-child) {
             margin-bottom: 60px;
+        }
+        @media (max-width: 1920px) {
+            font-size: 88px;
         }
         @media (max-width: 1600px) {
             font-size: 80px;

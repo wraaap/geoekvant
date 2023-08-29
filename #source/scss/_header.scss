@@ -134,7 +134,7 @@
                 }
             }
         }
-        .button a {
+        .button {
             color: #FFF;
             font-family: "Jost";
             font-size: 25px;
@@ -163,6 +163,10 @@
     // .header__phone-body
 
     &__phone-body {
+        // display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     // .header__phone-link

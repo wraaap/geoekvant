@@ -9,11 +9,19 @@
 
     &__wrapper {
         gap: 30px;
+        flex-wrap: nowrap;
+        @media (max-width: 1920px) {
+            gap: 50px;
+        }
+        @media (max-width: 1360px) {
+            flex-wrap: wrap;
+        }
     }
 
     // .news__item
 
     &__item {
+        // flex-grow: 0;
     }
 
     // .news__item-bg
@@ -23,14 +31,32 @@
         padding: 21px 0 21px 30px;
         margin-bottom: 40px;
         border: 2px solid rgba(233, 78, 27, 0.30);
+        @media (max-width: 1920px) {
+            max-width: 27rem;
+        }
+        @media (max-width: 1870px) {
+            max-width: 23rem;
+        }
+        @media (max-width: 991.98px) { 
+            margin-bottom: 30px;
+        }
         @media (max-width: 767.98px) {
             max-width: 237px;
             height: 176px;
             padding: 7px 0 10px 12px;
             margin-bottom: 20px;
         }
+        a {
+            display: block;
+        }
         img {
             max-width: 557px;
+            @media (max-width: 1920px) {
+                max-width: 27rem;
+            }
+            @media (max-width: 1870px) {
+                max-width: 23rem;
+            }
             @media (max-width: 767.98px) {
                 max-width: 246px;
             }
@@ -41,6 +67,9 @@
 
     &__item-content {
         max-width: 508px;
+        @media (max-width: 1920px) {
+            max-width: 27rem;
+        }
         @media (max-width: 767.98px) {
             max-width: 259px;
         }
@@ -56,6 +85,14 @@
         font-weight: 500;
         line-height: 120%; /* 42px */
         margin-bottom: 30px;
+        display: block;
+        @media (max-width: 1600px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 991.98px) { 
+            margin-bottom: 20px;
+        }
         @media (max-width: 767.98px) {
             font-size: 25px;
             margin-bottom: 15px;
@@ -72,6 +109,9 @@
         font-weight: 400;
         line-height: 120%; /* 33.6px */
         margin-bottom: 30px;
+        @media (max-width: 1600px) {
+            font-size: 23px;
+        }
         @media (max-width: 767.98px) {
             font-size: 18px;
         }

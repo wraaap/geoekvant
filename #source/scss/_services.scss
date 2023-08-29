@@ -67,7 +67,7 @@
             font-weight: 500;
             line-height: 120%; /* 39.6px */
             text-transform: uppercase;
-            @media (max-width: 1800px) {
+            @media (max-width: 1920px) {
                 font-size: 30px;
             }
             @media (max-width: 1600px) {
@@ -191,6 +191,14 @@
             text-overflow: ellipsis;
         }
     }
-}
-.none {
+    &__button-next {
+        bottom: 20px;
+        top: auto;
+        @media (max-width: 1600px) {
+            right: -40px;
+        }
+        @media (max-width: 767.98px) {
+            bottom: 15px;
+        }
+    }
 }

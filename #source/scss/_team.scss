@@ -31,7 +31,9 @@
         padding: 60px 0 40px 0;
         // box-sizing: border-box;
         min-height: 100%;
-        overflow: visible; // последняя правка
+
+        // overflow: visible; // последняя правка
+
         height: 600px; // последняя правка
         @media (max-width: 991.98px) {
             height: 350px;

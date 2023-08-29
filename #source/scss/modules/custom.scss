@@ -37,10 +37,13 @@ body {
     // background-position: 50vw top;
     // background-size: 100% auto;
     @media (max-width: 1560px) {
-        background-position: 150% 0;
+        background-position: 300% 0;
+    }
+    @media (max-width: 1350px) {
+        background-position: 600% 0;
     }
     @media (max-width: 1200px) {
-        background-position: 200% 0;
+        background-position: -400% 0;
     }
     @media (max-width: 360px) {
         background-position: left top;

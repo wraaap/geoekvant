@@ -24,41 +24,41 @@
 <header class="header__container container">
     <div class="row">
         <div class="header__wrapper">
-            <a class="header__logo">
+            <a href="/" class="header__logo">
                 <img class="img-fluid" src="img/logo.svg" alt="Логотип">
             </a>
             <div class="header__menu-wrapper">
                 <nav class="header__menu">
                     <ul class="">
                         <li class="active">
-                            <a href="" class="">Главная</a>
+                            <a href="/" class="">Главная</a>
                         </li>
                         <li class="">
-                            <a href="" class="">О компании</a>
+                            <a href="about.html" class="">О компании</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Услуги</a>
+                            <a href="services.html" class="">Услуги</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Новости</a>
+                            <a href="news.html" class="">Новости</a>
                         </li>
                         <li class="">
                             <a href="" class="">Отзывы</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Контакты</a>
+                            <a href="contacts.html" class="">Контакты</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="header__phone-wrapper">
                 <div class="header__phone">
-                    <div class="header__phone-body button">
+                    <a href="tel:79059120526" class="header__phone-body button">
                         <img src="/img/whatsapp-btn.svg" alt="">
-                        <a href="tel:79059120526" class="header__phone-link">
+                        <div class="header__phone-link">
                             +7 905 912-05-26
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="header__burger">
@@ -72,18 +72,20 @@
     <div class="hero__slider swiper-hero row gx-0">
         <div class="hero__wrapper swiper-wrapper">
             <div class="hero__slide swiper-slide">
+                <div class="container">
                 <div class="hero__content">
                     <div class="hero__content-description">Юридическая компания, предоставляющая услуги по земельному праву и кадастровой оценке стоимости </div>
                     <h2 class="hero__content-title">Решим Ваш земельный вопрос в день обращения</h2>
-                    <button class="button">Проконсультироваться</button>
+                    <a href="" class="button">Проконсультироваться</a>
                 </div>
                 <img class="hero__img" src="img/hero-01.jpg" alt="">
+            </div>
             </div>
             <div class="hero__slide swiper-slide">
                 <div class="hero__content">
                     <div class="hero__content-description">Юридическая компания, предоставляющая услуги по земельному праву и кадастровой оценке стоимости </div>
                     <h2 class="hero__content-title">Решим Ваш земельный вопрос в день обращения</h2>
-                    <button class="button">Проконсультироваться</button>
+                    <a href="" class="button">Проконсультироваться</a>
                 </div>
                 <img class="hero__img" src="img/hero-01.jpg" alt="">
             </div>
@@ -142,8 +144,9 @@
                     <img class="services__item-content-img img-fluid" src="img/services/img-01.jpg" alt="">
                     <div class="services__item-content-title">Перевод земель</div>
                     <div class="services__item-content-text">Для перевода земель или земельных участков в составе таких земель из одной категории в другую заинтересованным лицом подается ходатайство о переводе земель из одной категории в другую или ходатайство о переводе земельных участков из состава земель одной категории в другую в исполнительный орган государственной власти или орган местного самоуправления, уполномоченные на рассмотрение этого ходатайства.</div>
+                    <a href="" class="swiper-button-next services__button-next"></a>
                 </div>
-                <div class="services__item-content tab-pane fade"  id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="services__item-content tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <img class="services__item-content-img img-fluid"src="img/services/img-01.jpg" alt="">
                     <div class="services__item-content-title">Защита в суде</div>
                     <div class="services__item-content-text">Для перевода земель или земельных участков в составе таких земель из одной категории в другую заинтересованным лицом подается ходатайство о переводе земель из одной категории в другую или ходатайство о переводе земельных участков из состава земель одной категории в другую в исполнительный орган государственной власти или орган местного самоуправления, уполномоченные на рассмотрение этого ходатайства.</div>
@@ -180,40 +183,48 @@
             <div class="swiper swiper-team">
                 <div class="team__wrapper-swiper swiper-wrapper">
                     <div class="team__item swiper-slide">
-                        <div class="team__item-bg">
-                            <img src="img/team/team-01.png" alt="">
-                        </div>
-                        <div class="team__item-text">
-                            <div class="team__item-text-name">Анжелика Юдина</div>
-                            <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
-                        </div>
+                        <a href="">
+                            <div class="team__item-bg">
+                                <img src="img/team/team-01.png" alt="">
+                            </div>
+                            <div class="team__item-text">
+                                <div class="team__item-text-name">Анжелика Юдина</div>
+                                <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
+                            </div>
+                        </a>
                     </div>
                     <div class="team__item swiper-slide">
-                        <div class="team__item-bg">
-                            <img src="img/team/team-02.png" alt="">
-                        </div>
-                        <div class="team__item-text">
-                            <div class="team__item-text-name">Aнтон Cавельев</div>
-                            <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
-                        </div>
+                        <a href="">
+                            <div class="team__item-bg">
+                                <img src="img/team/team-02.png" alt="">
+                            </div>
+                            <div class="team__item-text">
+                                <div class="team__item-text-name">Aнтон Cавельев</div>
+                                <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
+                            </div>
+                        </a>
                     </div>
                     <div class="team__item swiper-slide">
-                        <div class="team__item-bg">
-                            <img src="img/team/team-03.png" alt="">
-                        </div>
-                        <div class="team__item-text">
-                            <div class="team__item-text-name">Татьяна Одина</div>
-                            <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
-                        </div>
+                        <a href="">
+                            <div class="team__item-bg">
+                                <img src="img/team/team-03.png" alt="">
+                            </div>
+                            <div class="team__item-text">
+                                <div class="team__item-text-name">Татьяна Одина</div>
+                                <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
+                            </div>
+                        </a>
                     </div>
                     <div class="team__item swiper-slide">
-                        <div class="team__item-bg">
-                            <img src="img/team/team-03.png" alt="">
-                        </div>
-                        <div class="team__item-text">
-                            <div class="team__item-text-name">Татьяна Одина</div>
-                            <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
-                        </div>
+                        <a href="">
+                            <div class="team__item-bg">
+                                <img src="img/team/team-03.png" alt="">
+                            </div>
+                            <div class="team__item-text">
+                                <div class="team__item-text-name">Татьяна Одина</div>
+                                <div class="team__item-text-practice">юрист, 10 лет опыта</div> 
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -229,34 +240,34 @@
         <div class="news__wrapper row gx-0 row-col-3">
             <div class="news__item col">
                 <div class="news__item-bg">
-                    <img src="img/news/news-01.jpg" alt="">
+                    <a href=""><img src="img/news/news-01.jpg" alt=""></a>
                 </div>
                 <div class="news__item-content">
-                    <div class="news__item-content-title">Бесплатный офлайн тренинг</div>
+                    <a href="" class="news__item-content-title">Бесплатный офлайн тренинг</a>
                     <div class="news__item-content-text">Как риелтору и юристу зарабатывать от 40 000 р. на сделках с землей в 2022 году? офлайн тренинг президента компании екатерины ивановой для агентов недвижимости и риелторов.</div> 
                 </div>
             </div>
             <div class="news__item col">
                 <div class="news__item-bg">
-                    <img src="img/news/news-02.jpg" alt="">
+                    <a href=""><img src="img/news/news-02.jpg" alt=""></a>
                 </div>
                 <div class="news__item-content">
-                    <div class="news__item-content-title">Повышение квалификации</div>
+                    <a class="news__item-content-title">Повышение квалификации</a>
                     <div class="news__item-content-text">Завершилось обучение органов местного самоуправления по земельным вопросам.</div> 
                 </div>
             </div>
             <div class="news__item col">
                 <div class="news__item-bg">
-                    <img src="img/news/news-03.jpg" alt="">
+                    <a href=""><img src="img/news/news-03.jpg" alt=""></a>
                 </div>
                 <div class="news__item-content">
-                    <div class="news__item-content-title">Открытый семинар</div>
+                    <a class="news__item-content-title">Открытый семинар</a>
                     <div class="news__item-content-text">Покупаем и продаем землю. Как не нарваться на подводные камни.</div> 
                 </div>
             </div>
         </div>
         <div class="news__btn">
-            <button class="button ">смотреть все</button>
+            <button class="button ">Cмотреть все</button>
         </div>
     </div>
 </section><section class="sertificats">
@@ -306,7 +317,7 @@
 </section><section class="partners">
     <div class="container partners__container">
         <div class="row">
-            <div class="col title">Партнеры</div>
+            <div class="col title">Наши <span>партнеры</span></div>
         </div>
         <div class="row gx-0">
             <div class="swiper swiper-partners">
@@ -352,11 +363,6 @@
     <div class="footer-wrapper">
 <footer class="container">
     <div class="">г. кемерово<br>адрес</div>
-    <div class="">
-        <a href="https://mediatip.ru" target="_blank" class="dev">
-            <img src="/img/copyright_color.png" width="40">
-        </a>
-    </div>
     <div class="footer__phone">
         <div class="footer__phone-body button">
             <img src="/img/whatsapp-btn.svg" alt="">
@@ -364,6 +370,11 @@
                 +7 905 912-05-26
             </a>
         </div>
+    </div>
+    <div class="">
+        <a href="https://mediatip.ru" target="_blank" class="dev">
+            <img src="/img/copyright_color.png" width="40">
+        </a>
     </div>
 </footer>    </div>
     <script src="js/main.js"></script>

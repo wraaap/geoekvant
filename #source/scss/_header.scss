@@ -152,10 +152,10 @@
                 font-size: 16px; 
             }
             @media (max-width: 1300px) {
-                display: none;
+                // display: none;
             }
             @media (max-width: 767.98px) {
-                display: block;
+                // display: block;
             }
         }
     }
@@ -172,6 +172,13 @@
     // .header__phone-link
 
     &__phone-link {
+        display: inline-block;
+        @media (max-width: 1300px) {
+            display: none;
+        }
+        @media (max-width: 767.98px) {
+            display: block;
+        }
     }
 
     // .header__burger

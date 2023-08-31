@@ -24,41 +24,41 @@
 <header class="header__container container">
     <div class="row">
         <div class="header__wrapper">
-            <a class="header__logo">
+            <a href="/" class="header__logo">
                 <img class="img-fluid" src="img/logo.svg" alt="Логотип">
             </a>
             <div class="header__menu-wrapper">
                 <nav class="header__menu">
                     <ul class="">
                         <li class="active">
-                            <a href="" class="">Главная</a>
+                            <a href="/" class="">Главная</a>
                         </li>
                         <li class="">
-                            <a href="" class="">О компании</a>
+                            <a href="about.html" class="">О компании</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Услуги</a>
+                            <a href="services.html" class="">Услуги</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Новости</a>
+                            <a href="news.html" class="">Новости</a>
                         </li>
                         <li class="">
                             <a href="" class="">Отзывы</a>
                         </li>
                         <li class="">
-                            <a href="" class="">Контакты</a>
+                            <a href="contacts.html" class="">Контакты</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="header__phone-wrapper">
                 <div class="header__phone">
-                    <div class="header__phone-body button">
+                    <a href="tel:79059120526" class="header__phone-body button">
                         <img src="/img/whatsapp-btn.svg" alt="">
-                        <a href="tel:79059120526" class="header__phone-link">
+                        <div class="header__phone-link">
                             +7 905 912-05-26
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="header__burger">
@@ -84,34 +84,273 @@
         <div class="row">
             <div class="col title">О нас</div>
         </div>
-        <div class="services-page__intro row">
-            <div class="services-page__img col">
-                <img class="img-fluid" src="img/logo.svg" alt="Логотип">
+        <div class="services-page__intro row dnone">
+            <div class="services-page__img col col-xs-5">
+                <div class="team-about__item-bg services-page__item-bg">
+                    <img class="img-fluid" src="img/services/boss.png" alt="">
+                </div>  
             </div>
-            <div class="services-page__text col">
-                <p>Мы предоставляем широкий спектр юридических услуг по земельному праву и кадастровой оценке стоимости. Слаженная работа специалистов “Геоэквант” помогает решить каждый вопрос наших клиентов в максимально короткие сроки.</p>
-                <p>С уважением, руководитель компании “Геоэквант” А. А. В.</p>
+            <div class="services-page__text col col-xs-6">
+                <p class="services-page__text-content">Мы предоставляем широкий спектр юридических услуг по земельному праву и кадастровой оценке стоимости. Слаженная работа специалистов “Геоэквант” помогает решить каждый вопрос наших клиентов в максимально короткие сроки.</p>
+                <p class="services-page__text-author">С уважением, руководитель компании “Геоэквант” А. А. В.</p>
             </div>
-        </div>
-        <div class="services-page__individuals row">
-
-        </div>
-        <div class="services-page__legals row">
-
-        </div>
-        <div class="services-page__authorities row">
-
         </div>
     </div>
+</section>
+<section class="services-accordion container services-accordion-physical">
+    <div class="row">
+        <div class="col title">Физическим лицам</div>
+    </div>
+    <div class="services-accordion__row row accordion" id="accordionPhysical">
+        <div class="services-accordion__block-item full-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Консультация земельного юриста
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPhysical"> 
+                <div class="services-accordion__block-item-text accordion-body">
+                    <ul>
+                        <li>изменение назначения земель</li>
+                        <li>правильно выстроенная защита в случае земельного спора</li>
+                        <li>правильно выстроенная защита в случае земельного спора</li>
+                        <li>анализ документов для сделки с землей</li>
+                        <li>грамотно оформленное межевание земли</li>
+                        <li>определение перечня документов для выкупа или аренды земельного участка</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Оформление прав
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPhysical">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <ul>
+                    <li>регистрация</li>
+                    <li>наследование</li>
+                    <li>собственность</li>
+                    <li>бессрочной пользование</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Земельный адвокат
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPhysical">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Земельные споры – ситуация, когда не обойтись без помощи земельного юриста.</p>
+                  <p>Специализация предопределяет эффективность «лечения», играя ключевую роль при выборе тактики ведения дела.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Сопровождение сделок
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionPhysical">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Юридическое сопровождение сделок с земельными участками – единственный способ выявить «подводные камни» и обеспечить возможность целевого использования земельного участка.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Приватизация земельного участка
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionPhysical">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Приватизация участка, то есть оформление участка в собственность – единственный путь стать законным владельцем своей земли.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <a href="" class="services-button-more"></a>
+  </div>
+</section>
+<section class="services-accordion container services-accordion-legals">
+    <div class="row">
+        <div class="col title">Юридическим лицам</div>
+    </div>
+    <div class="services-accordion__row row accordion" id="accordionLegals">
+        <div class="services-accordion__block-item full-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingOne-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-2" aria-expanded="false" aria-controls="collapseOne-2">
+                Раздел, выдел земельного участка
+              </button>
+            </h2>
+            <div id="collapseOne-2" class="accordion-collapse collapse" aria-labelledby="headingOne-2" data-bs-parent="#accordionLegals"> 
+                <div class="services-accordion__block-item-text accordion-body">
+                    <ul>
+                        <li>при желании собственников недвижимости раздел осуществляется, если после процедуры не нарушаются границы существующего участка</li>
+                        <li>выделение доли в натуре (после разделения долевые совладельцы получают участки, площадь которых соответствует размеру доли)</li>
+                        <li>отчуждение одной части, нескольких частей существующего земельного участка.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingTwo-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo-2" aria-expanded="false" aria-controls="collapseTwo-2">
+                Оформление прав
+              </button>
+            </h2>
+            <div id="collapseTwo-2" class="accordion-collapse collapse" aria-labelledby="headingTwo-2" data-bs-parent="#accordionLegals">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <ul>
+                    <li>регистрация</li>
+                    <li>наследование</li>
+                    <li>собственность</li>
+                    <li>бессрочной пользование</li>
+                    <li>ограниченное пользование</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingThree-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-2" aria-expanded="false" aria-controls="collapseThree-2">
+                Выкуп земельного участка
+              </button>
+            </h2>
+            <div id="collapseThree-2" class="accordion-collapse collapse" aria-labelledby="headingThree-2" data-bs-parent="#accordionLegals">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>С 1 марта 2015 года в связи с масштабными поправками в Земельный кодекс РФ, земельные участки под строительство предоставляются по общему правилу только в аренду и только на торгах.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFour-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour-2" aria-expanded="false" aria-controls="collapseFour-2">
+                Кадастровый учет
+              </button>
+            </h2>
+            <div id="collapseFour-2" class="accordion-collapse collapse" aria-labelledby="headingFour-2" data-bs-parent="#accordionLegals">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Кадастровый учет - это процесс, в результате которого объект недвижимости приобретает индивидуальные характеристики, позволяющие его индивидуализировать среди всех иных существующих аналогичных объектов.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFive-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive-2" aria-expanded="false" aria-controls="collapseFive-2">
+                Купля-продажа участка
+              </button>
+            </h2>
+            <div id="collapseFive-2" class="accordion-collapse collapse" aria-labelledby="headingFive-2" data-bs-parent="#accordionLegals">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Как и частные лица, юр.лица могут продавать и покупать зарегистрированные земельные участки, которые стоят на кадастровом учете.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <a href="" class="services-button-more"></a>
+  </div>
+</section>
+<section class="services-accordion container services-accordion-authorities">
+    <div class="row">
+        <div class="col title">Органам государственной власти и местного самоуправления</div>
+    </div>
+    <div class="services-accordion__row row accordion" id="accordionAuthorities">
+        <div class="services-accordion__block-item full-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingOne-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-3" aria-expanded="false" aria-controls="collapseOne-3">
+                Передача земельных участков из федеральной в муниципальную собственность
+              </button>
+            </h2>
+            <div id="collapseOne-3" class="accordion-collapse collapse" aria-labelledby="headingOne-3" data-bs-parent="#accordionAuthorities"> 
+                <div class="services-accordion__block-item-text accordion-body">
+                    <ul>
+                        <li>помощь в определении возможности передачи земельного участка из федеральной в муниципальную собственность или собственность субъекта</li>
+                        <li>подготовка заявления и всех необходимых документов</li>
+                        <li>обеспечение прохождения документов в Росимуществе</li>
+                        <li>в случае отказа помощь в оценке судебной перспективы дела, представление интересов в суде</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingTwo-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo-3" aria-expanded="false" aria-controls="collapseTwo-3">
+                Оформление прав
+              </button>
+            </h2>
+            <div id="collapseTwo-3" class="accordion-collapse collapse" aria-labelledby="headingTwo-3" data-bs-parent="#accordionAuthorities">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <ul>
+                    <li>регистрация</li>
+                    <li>аренда</li>
+                    <li>собственность</li>
+                    <li>бессрочное пользование</li>
+                    <li>ограниченное пользование</li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingThree-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
+                Получение ордера ГАИТИ
+              </button>
+            </h2>
+            <div id="collapseThree-3" class="accordion-collapse collapse" aria-labelledby="headingThree-3" data-bs-parent="#accordionAuthorities">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Ордер ГАТИ выдается Государственной административно-технической инспекцией и требуется во всех случаях, когда необходимо осуществить плановые или аварийные работы.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFour-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour-3" aria-expanded="false" aria-controls="collapseFour-3">
+                Защита интересов в суде
+              </button>
+            </h2>
+            <div id="collapseFour-3" class="accordion-collapse collapse" aria-labelledby="headingFour-3" data-bs-parent="#accordionAuthorities">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>Защита в суде – крайняя мера, когда иным образом отстоять интересы муниципального образования или иных органов власти невозможно.</p>
+              </div>
+            </div>
+        </div>
+        <div class="services-accordion__block-item half-height accordion-item">
+            <h2 class="services-accordion__block-item-heading accordion-header" id="headingFive-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive-3" aria-expanded="false" aria-controls="collapseFive-3">
+                Разработка и изменение генеральных планов
+              </button>
+            </h2>
+            <div id="collapseFive-3" class="accordion-collapse collapse" aria-labelledby="headingFive-3" data-bs-parent="#accordionAuthorities">
+              <div class="services-accordion__block-item-text accordion-body">
+                  <p>консультация в подготовке проектов Генеральных планов</p>
+                  <p>разработка генеральных планов</p>
+                  <p>подготовке документов планирования</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <a href="" class="services-button-more"></a>
+  </div>
+</section>
+<section class="container">
+  <div class="row">
+      <a class="services-button button">Проконсультироваться</a>
+  </div>
 </section>    </main>
     <div class="footer-wrapper">
 <footer class="container">
     <div class="">г. кемерово<br>адрес</div>
-    <div class="">
-        <a href="https://mediatip.ru" target="_blank" class="dev">
-            <img src="/img/copyright_color.png" width="40">
-        </a>
-    </div>
     <div class="footer__phone">
         <div class="footer__phone-body button">
             <img src="/img/whatsapp-btn.svg" alt="">
@@ -119,6 +358,11 @@
                 +7 905 912-05-26
             </a>
         </div>
+    </div>
+    <div class="">
+        <a href="https://mediatip.ru" target="_blank" class="dev">
+            <img src="/img/copyright_color.png" width="40">
+        </a>
     </div>
 </footer>    </div>
     <script src="js/main.js"></script>

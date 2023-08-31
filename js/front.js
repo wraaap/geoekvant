@@ -259,6 +259,22 @@ const clientFeedbackSwiper = new Swiper(".client-feedback-swiper", {
     },
 });
 
+//Подключение кастомного скролла при ширине экрана больше 991 пикселя 
+if ($(window).width() > 991) {
+    (function ($) {
+        $(window).on("load", function () {
+            $(".text-content-scroll").mCustomScrollbar({
+                theme: 'dark',
+                scrollInertia: "300",
+                advanced: {
+                    updateOnContentResize: "true",
+                },
+            });
+        });
+    })(jQuery);
+};
+
+
 
 //Подключение кастомного скролла при ширине экрана больше 991 пикселя
 if ($(window).width() > 991) {
@@ -274,3 +290,67 @@ if ($(window).width() > 991) {
         });
     })(jQuery);
 };
+
+
+// Добавляем обработчики событий на заголовки для аккордеона
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    content.classList.toggle('active');
+  });
+});
+
+
+// Отключаем аккордеон
+
+
+    if (window.innerWidth <= 991) {
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.setAttribute('data-bs-toggle', 'collapse');
+            button.setAttribute('data-bs-target', '#' + button.parentElement.nextElementSibling.id);
+            button.removeAttribute('aria-expanded');
+            button.removeAttribute('aria-controls');
+        });
+
+        document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+            collapse.classList.add('collapse');
+            collapse.classList.remove('show');
+        });
+    }
+
+
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
+
+    function handleScreenChange(e) {
+        if (e.matches) {
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.setAttribute('data-bs-toggle', 'collapse');
+                button.setAttribute('data-bs-target', '#' + button.parentElement.nextElementSibling.id);
+                button.removeAttribute('aria-expanded');
+                button.removeAttribute('aria-controls');
+            });
+
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+                collapse.classList.add('collapse');
+                collapse.classList.remove('show');
+            });
+        } else {
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.removeAttribute('data-bs-toggle');
+                button.removeAttribute('data-bs-target');
+                button.setAttribute('aria-expanded', 'false');
+                button.setAttribute('aria-controls', button.parentElement.nextElementSibling.id);
+            });
+
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+                collapse.classList.remove('collapse');
+                collapse.classList.add('show');
+            });
+        }
+    }
+
+    handleScreenChange(mediaQuery);
+    mediaQuery.addListener(handleScreenChange);
+

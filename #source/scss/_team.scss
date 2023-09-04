@@ -6,15 +6,12 @@
     @media (max-width: 575.98px) {
         margin-bottom: 0;
     }
-    .container {
-        
-    }
     &__wrapper {
         gap: 20px;
         padding-bottom: 40px;
         min-height: 100%;
         @media (max-width: 1600px) { // последняя правка
-            overflow: visible; // последняя правка
+            // overflow: visible; // последняя правка
         }
         @media (max-width: 767.98px) {
             overflow: visible;
@@ -29,6 +26,12 @@
         }
     }
     
+    .container {
+        @media (max-width: 1600px) {
+            // width: 100%;
+        }
+    }
+
     &__wrapper-swiper {
         padding: 60px 0 40px 0;
         // box-sizing: border-box;
@@ -239,10 +242,10 @@
 
 .swiper-team {
     @media (max-width: 1600px) { // последняя правка
-        overflow: visible; // последняя правка
+        // overflow: visible; // последняя правка 
     }
     @media (max-width: 767.98px) {
-        overflow: visible;
+        // overflow: visible;
         min-height: 100%;
     }
 }
